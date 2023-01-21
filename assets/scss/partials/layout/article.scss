@@ -97,6 +97,9 @@
     #TableOfContents {
         overflow-x: auto;
         max-height: 75vh;
+        ul > li::marker {
+            content: "";
+        }
 
         ol,
         ul {
@@ -136,7 +139,7 @@
             }
         }
         li.active-class > a {
-            border-left: var(--heading-border-size) solid var(--accent-color);
+            border-left: var(--heading-border-size) solid var(--real-accent-color);
             font-weight: bold;
         }
 
@@ -209,6 +212,10 @@
         margin: 1.5em 0;
     }
 
+    h2 {
+        border-inline-start: var(--heading-border-size) solid var(--real-accent-color);
+    }
+
     h1,
     h2,
     h3,
@@ -217,7 +224,6 @@
     h6 {
         margin-inline-start: calc((var(--card-padding)) * -1);
         padding-inline-start: calc(var(--card-padding) - var(--heading-border-size));
-        border-inline-start: var(--heading-border-size) solid var(--accent-color);
     }
 
     figure {
